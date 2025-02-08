@@ -542,9 +542,10 @@ header {
 }
 .section3 .section3-content .objective-list-container ul li .title {
   font-weight: bold;
-  font-size: 1.1em;
-  margin-top: 10px;
-  margin-bottom: 15px;
+  margin-block: 10px;
+}
+.section3 .section3-content .objective-list-container ul li .description {
+  font-size: 0.8em;
 }
 .section3
   .section3-content
