@@ -6,6 +6,19 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #fdfdfd;
+}
+
+.fa-star,
+.fa-star-half {
+  color: #fcd667;
+}
+
+.fa-heart {
+  color: #269ebe;
+}
+
 .roboto-regular {
   font-family: "Roboto", serif;
   font-optical-sizing: auto;
@@ -30,11 +43,20 @@
   font-variation-settings: "wdth" 100;
 }
 
+header {
+  position: sticky;
+  top: 0;
+  margin-bottom: 30px;
+  width: 100%;
+  z-index: 3;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 8px 80px;
+}
+
 .header-title {
   display: flex;
-  padding: 10px 55px;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .travel-title {
   font-size: 1.25em;
@@ -49,10 +71,578 @@
 .header-title .options a {
   text-decoration: none;
   padding-inline: 18px;
+  font-size: 0.8em;
+  color: black;
+}
+.header-title .options a:hover {
+  text-decoration: underline;
+}
+.header-title .options a:visited {
+  color: gray;
 }
 .header-title .contact {
-  /* border: 1px solid grey; */
+  color: black;
   box-shadow: 0 0 15px rgba(128, 128, 128, 0.5);
   padding: 8px 15px;
-  border-radius: 21px;
+  border-radius: 20px;
+  font-size: 0.8em;
+  text-decoration: none;
+  border: 1px solid #fdfdfd;
+}
+.header-title .contact:hover {
+  background-color: #4c97ab;
+  color: #fdfdfd;
+}
+.header-title .contact:focus {
+  border: 1px solid darkblue;
+}
+
+.page-content {
+  padding: 0 80px;
+}
+
+.section1 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+.section1 .side-navbar-container {
+  display: flex;
+  align-items: center;
+}
+.section1 .side-navbar {
+  left: 0;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  height: 300px;
+  justify-content: space-around;
+  width: 50px;
+}
+.section1 .side-navbar > * {
+  transform: rotate(-90deg);
+}
+.section1 .side-navbar a {
+  font-size: 0.8em;
+  height: 30px;
+  line-height: 30px;
+  padding-inline: 2px;
+}
+.section1 .side-navbar a:nth-child(1) {
+  color: black;
+  text-decoration: none;
+}
+.section1 .side-navbar a:nth-child(2) {
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid #249fbc;
+}
+.section1 .side-navbar a:nth-child(3) {
+  color: black;
+  text-decoration: none;
+}
+
+.section1 .content {
+  width: 100%;
+  background-color: #f5f5f5;
+  display: flex;
+  padding: 30px 55px;
+  gap: 55px;
+  border-radius: 20px;
+}
+
+.section1 .content .content1 {
+  /* flex-grow: 1; */
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 30px;
+}
+.section1 .content .content1 * {
+  border-radius: 15px;
+}
+.section1 .content .content1 .review-card {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.section1 .content .content1 .review-card1 {
+  padding-top: 30px;
+}
+.section1 .content .content1 .review-card-img {
+  position: relative;
+}
+.section1 .content .content1 .review-img {
+  width: 210px;
+  height: 300px;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding-bottom: 15px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.6);
+}
+.section1 .content .content1 .review-img1 {
+  background-image: url("https://is.zobj.net/image-server/v1/images?r=-a8Z2LddHC7_8Qut8Wk3u6mLesyQ6jQ60b7vpm_iMaHLujbAtx1WnpNRskLoY-uOicuqQ6Gw5SgHLeb9PQGY30s9bYr_mRoipCONHS4m43I718xZXBqv2B3uYhCQ06ROvOetcutrJNAKgxRjuh9vvbaBYK_ay-h31Qe31Ybg68sSyh3lBonHWT00-OGrMIrH1gUft1zMYbrKmUl-raqCmapkfP_bd4CxhWKmmeB0fj4d4PedPOXp0GJcEdo");
+  background-position: bottom;
+}
+.section1 .content .content1 .review-img2 {
+  background-image: url("https://wallpapers.com/images/hd/anime-beach-pef8s5wvur0ahdkp.jpg");
+  background-position: right;
+}
+.section1 .content .content1 .review-img .review-img-info {
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 80%;
+  height: 30%;
+  display: flex;
+  padding: 15px 10px;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 0.8em;
+  border-radius: 15px;
+}
+.section1 .content .content1 .review-img .review-img-info .review-img-location {
+  display: flex;
+  justify-content: space-between;
+}
+.section1
+  .content
+  .content1
+  .review-img
+  .review-img-info
+  .review-img-location
+  .country,
+.section1
+  .content
+  .content1
+  .review-img
+  .review-img-info
+  .review-img-location
+  .rating {
+  display: flex;
+  gap: 5px;
+}
+.section1 .content .content1 .review-info1 {
+  width: 270px;
+  padding: 20px 15px;
+  background-color: #fdfdfd;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.section1 .content .content1 .review-info1 {
+  height: 160px;
+}
+.section1 .content .content1 .review-info1 .profile-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  object-fit: cover;
+  object-position: top;
+}
+.section1 .content .content1 .review-info1 .profile-name {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bolder;
+  font-size: 1.2em;
+}
+.section1 .content .content1 .review-info1 .profile-location {
+  font-size: 0.8em;
+  display: flex;
+  justify-content: space-between;
+}
+.section1 .content .content1 .review-info2 {
+  /* height: 175px; */
+  display: flex;
+  background-color: #fdfdfd;
+  padding: 20px 15px;
+  gap: 15px;
+}
+.section1 .content .content1 .review-info2 .review-info2-img1 {
+  background-color: yellow;
+  width: 100px;
+  height: 140px;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.6);
+}
+.section1 .content .content1 .review-info2 .review-info2-section {
+  font-size: 0.8em;
+  width: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.section1
+  .content
+  .content1
+  .review-info2
+  .review-info2-section
+  .review-info2-small-img-container {
+  display: flex;
+  position: relative;
+  height: 75px;
+}
+.section1
+  .content
+  .content1
+  .review-info2
+  .review-info2-section
+  .review-info2-small-img {
+  height: 75px;
+  width: 50px;
+  background-color: red;
+  border-radius: 15px;
+  position: absolute;
+  border: 1px solid #fdfdfd;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.6);
+}
+.section1
+  .content
+  .content1
+  .review-info2
+  .review-info2-section
+  .review-info2-small-img1 {
+  left: 0;
+}
+.section1
+  .content
+  .content1
+  .review-info2
+  .review-info2-section
+  .review-info2-small-img2 {
+  left: 35px;
+}
+.section1
+  .content
+  .content1
+  .review-info2
+  .review-info2-section
+  .review-info2-small-img3 {
+  left: 70px;
+}
+
+.section1 .content .content2 {
+  flex-basis: 100%;
+}
+.section1 .content .content2 .content2-article-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.section1 .content .content2 .content2-article-container .content2-article {
+  width: 400px;
+}
+.section1 .content .content2 .content2-article-container .content2-article h2 {
+  font-size: 3em;
+  margin-bottom: 40px;
+}
+.section1
+  .content
+  .content2
+  .content2-article-container
+  .content2-article
+  h2::first-letter {
+  color: #249fbc;
+  font-size: 1.5em;
+}
+.section1 .content .content2 .content2-article-container .content2-article p {
+  width: 250px;
+  margin-bottom: 40px;
+}
+.section1
+  .content
+  .content2
+  .content2-article-container
+  .content2-article
+  .buttons {
+  display: flex;
+  gap: 20px;
+}
+.section1
+  .content
+  .content2
+  .content2-article-container
+  .content2-article
+  .explore-button {
+  background-color: #269ebe;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.8em;
+  border: none;
+  color: #fdfdfd;
+  box-shadow: 0px 5px 10px rgba(128, 128, 128, 0.5);
+}
+.section1
+  .content
+  .content2
+  .content2-article-container
+  .content2-article
+  .play-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 20px;
+  font-size: 0.8em;
+  border: none;
+  background-color: #fdfdfd;
+}
+.section1
+  .content
+  .content2
+  .content2-article-container
+  .content2-article
+  .play-button:hover {
+  border: 1px solid #249fbc;
+}
+.section1
+  .content
+  .content2
+  .content2-article-container
+  .content2-article
+  .play-button
+  i {
+  color: #249fbc;
+}
+
+.section2 {
+  display: flex;
+  margin-top: 25px;
+  justify-content: center;
+  padding-inline: 55px;
+}
+.section2 .section2-article {
+  padding: 50px 45px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.section2 .section2-article h1 {
+  font-size: 2.5em;
+}
+.section2 .section2-article .section2-article-content p {
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+.section2 .section2-article .section2-article-content .explore-more-button {
+  border: 1px solid #269ebe;
+  color: #269ebe;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.8em;
+  transition: background-color 1s, color 1s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.section2
+  .section2-article
+  .section2-article-content
+  .explore-more-button:hover {
+  background-color: #269ebe;
+  color: #fdfdfd;
+}
+.section2
+  .section2-article
+  .section2-article-content
+  .explore-more-button:focus {
+  background-color: #f98426;
+  color: #fdfdfd;
+  border: 1px solid #f98426;
+}
+.section2 .cards {
+  display: flex;
+  gap: 18px;
+  align-items: start;
+}
+.section2 .cards .card {
+  border-radius: 20px;
+  padding: 15px;
+  background-color: #fdfdfd;
+  width: 210px;
+  height: 300px;
+  transition: transform 1s;
+  box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.6);
+}
+.section2 .cards .card:hover {
+  transform: scale(1.05);
+}
+.section2 .cards .card:nth-child(2) {
+  margin-top: 70px;
+}
+.section2 .cards .card:nth-child(3) {
+  margin-top: 35px;
+}
+.section2 .cards .card .card-img {
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  object-fit: cover;
+  object-position: center;
+}
+
+.section3 {
+  margin-block: 50px;
+}
+.section3 .section3-title {
+  text-align: center;
+}
+.section3 .section3-title h3 {
+  font-size: 1.5em;
+}
+.section3 .section3-title p {
+  font-size: 0.8em;
+}
+.section3 .section3-title * {
+  margin-bottom: 15px;
+}
+.section3 .section3-content {
+  display: flex;
+  margin-top: 30px;
+}
+.section3 .section3-content .objective-list-container {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section3 .section3-content .objective-list-container ul {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 50%;
+  list-style-type: none;
+  gap: 40px;
+}
+.section3 .section3-content .objective-list-container li .list-number {
+  padding: 5px 8px;
+  border-radius: 8px;
+  color: #fdfdfd;
+  display: inline-block;
+}
+.section3
+  .section3-content
+  .objective-list-container
+  ul
+  li:nth-child(1)
+  .list-number {
+  background-color: #259fbc;
+}
+.section3
+  .section3-content
+  .objective-list-container
+  ul
+  li:nth-child(2)
+  .list-number {
+  background-color: #46b4bf;
+}
+.section3 .section3-content .objective-list-container ul li .title {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.section3
+  .section3-content
+  .objective-list-container
+  ul
+  li:nth-child(3)
+  .list-number {
+  background-color: #3a9393;
+}
+.section3 .section3-content .landscape-img-card-container {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+}
+.section3 .section3-content .landscape-img-card {
+  position: relative;
+}
+.section3 .section3-content .landscape-img-card .rating {
+  position: absolute;
+  padding: 8px 12px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.section3 .section3-content .landscape-img-card .rating img {
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  border-radius: 50px;
+  border: none;
+  object-fit: cover;
+  object-position: top;
+}
+.section3 .section3-content .landscape-img-card .rating .name {
+  margin-block: 5px;
+  font-size: 0.8em;
+}
+.section3 .section3-content .landscape-img-card .rating .icon-rating {
+  display: flex;
+  gap: 5px;
+  height: 14px;
+  align-items: center;
+}
+.section3 .section3-content .landscape-img-card .rating:nth-child(1) {
+  top: 40px;
+  left: -40px;
+}
+.section3 .section3-content .landscape-img-card .rating:nth-child(2) {
+  top: calc(40px + 140px);
+  right: -40px;
+}
+.section3 .section3-content .landscape-img-card .rating:nth-child(3) {
+  top: calc(40px + 140px + 140px);
+  left: -40px;
+}
+.section3 .section3-content .landscape-img-card figure {
+  background-image: url("https://otakuusamagazine.com/wp-content/uploads/2022/09/ousa-travel-japan-anime-laid-back-camp.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: red;
+  border-radius: 15px;
+  width: 340px;
+  height: 550px;
+}
+
+.back-to-top-button {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  text-decoration: none;
+  background-color: #fdfdfd;
+  border-radius: 25px;
+  box-shadow: 0 0 20px rgba(128, 128, 128, 0.6);
+}
+.back-to-top-button i {
+  color: #259fbc;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.8em;
+  background-color: #f6f6f6;
 }
